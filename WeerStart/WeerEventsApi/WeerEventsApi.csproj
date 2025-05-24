@@ -7,11 +7,18 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.3"/>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.3" />
     </ItemGroup>
 
     <ItemGroup>
       <None Include="Steden\Steden.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="WeerBerichten\Managers\" />
+      <Folder Include="WeerBerichten\Proxies\" />
+      <Folder Include="WeerStations\Factory\" />
+      <Folder Include="WeerStations\Managers\" />
     </ItemGroup>
 
 </Project>
