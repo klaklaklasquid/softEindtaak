@@ -1,3 +1,4 @@
+using WeerEventsApi.Logging;
 using WeerEventsApi.Steden;
 using WeerEventsApi.WeerStations.Factory;
 using WeerEventsApi.WeerStations.Metingen;
@@ -8,9 +9,19 @@ namespace WeerEventsApi.WeerStations.Managers
     public class WeerStationManager
     {
         private readonly List<WeerStation> _stations = new();
+        private readonly IMetingLogger _logger;
+
+        public WeerStationManager(IMetingLogger logger)
+        {
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+        }
 
         public void VoegStationToe(WeerStation station)
         {
+            station.MetingGemaakt += meting =>
+            {
+                _logger.Log($"Meting: {meting.Moment}, {meting.Waarde} {meting.Eenheid} in {meting.Locatie.Naam}");
+            };
             _stations.Add(station);
         }
 

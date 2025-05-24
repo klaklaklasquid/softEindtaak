@@ -1,10 +1,20 @@
-### GET
+### Check server status
 GET http://localhost:5008/
 
-###
-
-### GET steden
+### Get all cities
 GET http://localhost:5008/steden
+
+### Get all weather stations
+GET http://localhost:5008/weerstations
+
+### Get all measurements
+GET http://localhost:5008/metingen
+
+### Get weather report
+GET http://localhost:5008/weerbericht
+
+### Trigger all stations to do a measurement
+POST http://localhost:5008/commands/meting-command
 
 ###
 

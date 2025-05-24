@@ -7,10 +7,13 @@ namespace WeerEventsApi.Facade.Controllers;
 public class DomeinController : IDomeinController {
     private readonly IStadManager _stadManager;
     private readonly WeerStationManager _weerStationManager;
+    private readonly IWeerbericht _weerbericht;
 
-    public DomeinController(IStadManager stadManager, WeerStationManager weerStationManager) {
+    public DomeinController(IStadManager stadManager, WeerStationManager weerStationManager, IWeerbericht weerbericht) {
         _stadManager = stadManager;
         _weerStationManager = weerStationManager;
+        _weerbericht = weerbericht;
+
     }
 
     public IEnumerable<StadDto> GeefSteden() {
@@ -45,10 +48,7 @@ public class DomeinController : IDomeinController {
     }
 
     public WeerBerichtDto GeefWeerbericht() {
-        //TODO
-        return new WeerBerichtDto {
-            Moment = DateTime.Now,
-            Inhoud = "Het weerbericht is momenteel niet beschikbaar."
-        };
+        var metingen = _weerStationManager.GeefAlleMetingen();
+        return _weerbericht.GenereerWeerbericht(metingen);
     }
 }

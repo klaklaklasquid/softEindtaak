@@ -13,6 +13,10 @@ builder.Services.AddSingleton<IStadRepository, StadRepository>();
 builder.Services.AddSingleton<IStadManager, StadManager>();
 builder.Services.AddSingleton<WeerStationManager>();
 builder.Services.AddSingleton<IDomeinController, DomeinController>();
+builder.Services.AddSingleton<IWeerbericht, Weerbericht>();
+builder.Services.AddSingleton<IWeerbericht>(sp =>
+    new WeerberichtProxy(new Weerbericht())
+);
 
 WebApplication app = builder.Build();
 

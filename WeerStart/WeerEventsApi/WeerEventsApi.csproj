@@ -14,9 +14,4 @@
       <None Include="Steden\Steden.json" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="WeerBerichten\Managers\" />
-      <Folder Include="WeerBerichten\Proxies\" />
-    </ItemGroup>
-
 </Project>
