@@ -17,8 +17,6 @@
     <ItemGroup>
       <Folder Include="WeerBerichten\Managers\" />
       <Folder Include="WeerBerichten\Proxies\" />
-      <Folder Include="WeerStations\Factory\" />
-      <Folder Include="WeerStations\Managers\" />
     </ItemGroup>
 
 </Project>
