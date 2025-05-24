@@ -1,48 +1,54 @@
 using WeerEventsApi.Facade.Dto;
 using WeerEventsApi.Steden.Managers;
+using WeerEventsApi.WeerStations.Managers;
 
 namespace WeerEventsApi.Facade.Controllers;
 
-public class DomeinController : IDomeinController
-{
+public class DomeinController : IDomeinController {
     private readonly IStadManager _stadManager;
+    private readonly WeerStationManager _weerStationManager;
 
-    public DomeinController(IStadManager stadManager)
-    {
+    public DomeinController(IStadManager stadManager, WeerStationManager weerStationManager) {
         _stadManager = stadManager;
+        _weerStationManager = weerStationManager;
     }
 
-    public IEnumerable<StadDto> GeefSteden()
-    {
-        return _stadManager.GeefSteden().Select(s => new StadDto
-        {
+    public IEnumerable<StadDto> GeefSteden() {
+        return _stadManager.GeefSteden().Select(s => new StadDto {
             Naam = s.Naam,
             Beschrijving = s.Beschrijving,
             GekendVoor = s.GekendVoor
         });
     }
 
-    public IEnumerable<WeerStationDto> GeefWeerstations()
-    {
+    public IEnumerable<WeerStationDto> GeefWeerstations() {
         //TODO
-        throw new NotImplementedException();
+        return _weerStationManager.GeefAlleStations().Select(ws => new WeerStationDto {
+            Type = ws.GetType().Name,
+            StadNaam = ws.Locatie.Naam
+        });
     }
 
-    public IEnumerable<MetingDto> GeefMetingen()
-    {
+    public IEnumerable<MetingDto> GeefMetingen() {
         //TODO
-        throw new NotImplementedException();
+        return _weerStationManager.GeefAlleMetingen().Select(m => new MetingDto {
+            Moment = m.Moment,
+            Waarde = m.Waarde,
+            Eenheid = m.Eenheid.ToString(),
+            StadNaam = m.Locatie.Naam
+        });
     }
 
-    public void DoeMetingen()
-    {
+    public void DoeMetingen() {
         //TODO
-        throw new NotImplementedException();
+        _weerStationManager.DoeMetingenVoorAlleStations();
     }
 
-    public WeerBerichtDto GeefWeerbericht()
-    {
+    public WeerBerichtDto GeefWeerbericht() {
         //TODO
-        throw new NotImplementedException();
+        return new WeerBerichtDto {
+            Moment = DateTime.Now,
+            Inhoud = "Het weerbericht is momenteel niet beschikbaar."
+        };
     }
 }
