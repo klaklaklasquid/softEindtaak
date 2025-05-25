@@ -1,30 +1,31 @@
 using System.Xml.Serialization;
+using WeerEventsApi.WeerStations.Metingen;
+using System.Globalization;
 
-namespace WeerEventsApi.Logging
-{
-    public class XmlMetingLoggerDecorator : IMetingLogger
-    {
+namespace WeerEventsApi.Logging {
+    public class XmlMetingLoggerDecorator : IMetingLogger {
         private readonly IMetingLogger _inner;
 
-        public XmlMetingLoggerDecorator(IMetingLogger inner)
-        {
+        public XmlMetingLoggerDecorator(IMetingLogger inner) {
             _inner = inner;
         }
 
-        public void Log(string message)
-        {
+        public void Log(string message) {
             _inner.Log(message);
-            File.AppendAllText("log.xml", message + Environment.NewLine);
         }
 
-        public void LogMeting(object meting)
-        {
-            var serializer = new XmlSerializer(meting.GetType());
-            using (var stringWriter = new StringWriter())
-            {
-                serializer.Serialize(stringWriter, meting);
-                Log(stringWriter.ToString());
-            }
+        public void LogMeting(Meting meting) {
+            string moment = meting.Moment.ToString("d/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+
+            string xml =
+                $@"<Meting>
+	                <Moment>{moment}</Moment>
+	                <Waarde>{meting.Waarde.ToString(CultureInfo.InvariantCulture)}</Waarde>
+	                <Eenheid>{meting.Eenheid}</Eenheid>
+                </Meting>
+                ";
+            File.AppendAllText("log.xml", xml);
+            _inner.LogMeting(meting);
         }
     }
 }

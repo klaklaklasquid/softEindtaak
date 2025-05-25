@@ -21,6 +21,11 @@ namespace WeerEventsApi.WeerStations.Managers
             station.MetingGemaakt += meting =>
             {
                 _logger.Log($"Meting: {meting.Moment}, {meting.Waarde} {meting.Eenheid} in {meting.Locatie.Naam}");
+                _logger.LogMeting(meting);
+                if (_logger is JsonMetingLoggerDecorator jsonLogger)
+                    jsonLogger.LogMeting(meting);
+                if (_logger is XmlMetingLoggerDecorator xmlLogger)
+                    xmlLogger.LogMeting(meting);
             };
             _stations.Add(station);
         }

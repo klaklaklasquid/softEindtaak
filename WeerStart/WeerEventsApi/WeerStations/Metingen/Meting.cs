@@ -10,11 +10,14 @@ namespace WeerEventsApi.WeerStations.Metingen {
 
     public class Meting {
         public DateTime Moment { get; set; }
-        public Double Waarde { get; set; }
+        public double Waarde { get; set; }
         public Eenheid Eenheid { get; set; }
         public Stad Locatie { get; set; }
 
-        public Meting(DateTime moment, Double waarde, Eenheid eenheid, Stad locatie) {
+        // Parameterless constructor for XML serialization
+        public Meting() { }
+
+        public Meting(DateTime moment, double waarde, Eenheid eenheid, Stad locatie) {
             Moment = moment;
             Waarde = waarde;
             Eenheid = eenheid;

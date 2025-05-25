@@ -8,15 +8,29 @@
     "GekendVoor": "Studenten"
   }
 }
-// nieuwe log entries verschijnen hieronderMeting: 24/05/2025 20:44:54, 951,5 HectoPascal in Sint-Niklaas
-Meting: 24/05/2025 20:44:54, 35,86 GradenCelsius in Aalst
-Meting: 24/05/2025 20:44:54, 34,88 MillimeterPerVierkanteMeterPerUur in Aalst
-Meting: 24/05/2025 20:44:54, 7,09 GradenCelsius in Sint-Niklaas
-Meting: 24/05/2025 20:44:54, 121,2 KilometerPerUur in Aalst
-Meting: 24/05/2025 20:44:54, 1037,94 HectoPascal in Aalst
-Meting: 24/05/2025 20:44:54, 35,64 GradenCelsius in Aalst
-Meting: 24/05/2025 20:44:54, 69,87 KilometerPerUur in Aalst
-Meting: 24/05/2025 20:44:54, 85,33 KilometerPerUur in Gent
-Meting: 24/05/2025 20:44:54, 1,91 MillimeterPerVierkanteMeterPerUur in Gent
-Meting: 24/05/2025 20:44:54, 965,16 HectoPascal in Gent
-Meting: 24/05/2025 20:44:54, 14,65 KilometerPerUur in Sint-Niklaas
+// nieuwe log entries verschijnen hieronder
+
+{"Moment":"25/05/2025 13:26:59","Waarde":25.01,"Eenheid":"MillimeterPerVierkanteMeterPerUur"}
+{"Moment":"25/05/2025 13:26:59","Waarde":25.01,"Eenheid":"MillimeterPerVierkanteMeterPerUur"}
+{"Moment":"25/05/2025 13:26:59","Waarde":-1.8,"Eenheid":"GradenCelsius"}
+{"Moment":"25/05/2025 13:26:59","Waarde":-1.8,"Eenheid":"GradenCelsius"}
+{"Moment":"25/05/2025 13:26:59","Waarde":20.66,"Eenheid":"GradenCelsius"}
+{"Moment":"25/05/2025 13:26:59","Waarde":20.66,"Eenheid":"GradenCelsius"}
+{"Moment":"25/05/2025 13:26:59","Waarde":18.97,"Eenheid":"KilometerPerUur"}
+{"Moment":"25/05/2025 13:26:59","Waarde":18.97,"Eenheid":"KilometerPerUur"}
+{"Moment":"25/05/2025 13:26:59","Waarde":995.35,"Eenheid":"HectoPascal"}
+{"Moment":"25/05/2025 13:26:59","Waarde":995.35,"Eenheid":"HectoPascal"}
+{"Moment":"25/05/2025 13:26:59","Waarde":55.61,"Eenheid":"KilometerPerUur"}
+{"Moment":"25/05/2025 13:26:59","Waarde":55.61,"Eenheid":"KilometerPerUur"}
+{"Moment":"25/05/2025 13:26:59","Waarde":29.38,"Eenheid":"MillimeterPerVierkanteMeterPerUur"}
+{"Moment":"25/05/2025 13:26:59","Waarde":29.38,"Eenheid":"MillimeterPerVierkanteMeterPerUur"}
+{"Moment":"25/05/2025 13:26:59","Waarde":139.68,"Eenheid":"KilometerPerUur"}
+{"Moment":"25/05/2025 13:26:59","Waarde":139.68,"Eenheid":"KilometerPerUur"}
+{"Moment":"25/05/2025 13:26:59","Waarde":118.22,"Eenheid":"KilometerPerUur"}
+{"Moment":"25/05/2025 13:26:59","Waarde":118.22,"Eenheid":"KilometerPerUur"}
+{"Moment":"25/05/2025 13:26:59","Waarde":51.12,"Eenheid":"KilometerPerUur"}
+{"Moment":"25/05/2025 13:26:59","Waarde":51.12,"Eenheid":"KilometerPerUur"}
+{"Moment":"25/05/2025 13:26:59","Waarde":34.18,"Eenheid":"MillimeterPerVierkanteMeterPerUur"}
+{"Moment":"25/05/2025 13:26:59","Waarde":34.18,"Eenheid":"MillimeterPerVierkanteMeterPerUur"}
+{"Moment":"25/05/2025 13:26:59","Waarde":40.66,"Eenheid":"MillimeterPerVierkanteMeterPerUur"}
+{"Moment":"25/05/2025 13:26:59","Waarde":40.66,"Eenheid":"MillimeterPerVierkanteMeterPerUur"}
