@@ -1,4 +1,4 @@
-# WeerEventsApi
+# SoftEindtaak WeerEventAPI
 
 **Oneliner:**  
 RESTful .NET 9 API voor het beheren van weerstations, metingen en weersvoorspellingen, inclusief logging in JSON en XML.
