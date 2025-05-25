@@ -40,3 +40,7 @@ De API start standaard op `http://localhost:5008/` (controleer de console output
 - Voor performance: caching proxy voor het weerbericht voorkomt onnodige vertraging bij herhaalde requests.
 
 ---
+
+## ( informal ) ClassDiagram
+
+![classdiagram](image/UML.png)
