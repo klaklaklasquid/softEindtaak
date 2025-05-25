@@ -30,8 +30,6 @@ De API start standaard op `http://localhost:5008/` (controleer de console output
   Elke meting wordt als losse JSON object (één per regel) toegevoegd aan `log.json`, met enkel de velden `Moment`, `Waarde`, en `Eenheid`.
 - **Weerbericht endpoint:**  
   Eerste call duurt ~5 seconden door gesimuleerde zware berekening; volgende calls binnen 1 minuut zijn direct (caching proxy).
-- **Geen database:**  
-  Alle data wordt in-memory bijgehouden; bij herstart zijn metingen weg.
 - **Stedenbestand:**  
   Zorg dat het JSON-bestand met steden (`Steden/Data/steden.json`) aanwezig is, anders start de applicatie niet correct.
 
@@ -43,4 +41,4 @@ De API start standaard op `http://localhost:5008/` (controleer de console output
 
 ## ( informal ) ClassDiagram
 
-![classdiagram](image/UML.png)
+![classdiagram](Image/UML.png)
